@@ -32,8 +32,7 @@ Kể từ Next.js 13 mang đến App Routing như một lựa chọn mới để
 
 - Mỗi folder, là 1 thành phần trên đường link URL. file page.tsx chính là giao diện component được render ứng với route đấy.
 
-Code minh họa:
-
+### Ví dụ
 
 http://localhost:3000/
 
