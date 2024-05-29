@@ -88,4 +88,4 @@ const DashBoard = () => {
 export default DashBoard;
 ```
 
-*Bài tiếp theo [NX8 Giới thiệu về Routing ](/session/session_08_routing.md)*
+*Bài tiếp theo [NX8 Điều hướng trang Navigation ](/session/session_08_navigation.md)*
