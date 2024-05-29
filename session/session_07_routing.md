@@ -34,10 +34,12 @@ Kể từ Next.js 13 mang đến App Routing như một lựa chọn mới để
 
 ### Ví dụ
 
-http://localhost:3000/
 
 ```
-/** /app/page.tsx **/
+/** 
+    http://localhost:3000/
+    /app/page.tsx 
+**/
 
 const Home = () => {
   return (
@@ -56,10 +58,12 @@ export default Home;
 ```
 
 
-http://localhost:3000/admin/
 
 ```
-/** /app/admin/page.tsx **/
+/** 
+    http://localhost:3000/admin/
+    /app/admin/page.tsx 
+**/
 
 const Admin = () => {
     return (
@@ -72,10 +76,12 @@ const Admin = () => {
 export default Admin;
 ```
 
-http://localhost:3000/admin/dashboard
 
 ```
-/** /app/admin/dashboard/page.tsx **/
+/** 
+    http://localhost:3000/admin/dashboard
+    /app/admin/dashboard/page.tsx 
+**/
 
 const DashBoard = () => {
     return (

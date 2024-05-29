@@ -26,10 +26,12 @@ Vì vậy, 'use client' được sử dụng để đảm bảo rằng component
 
 ### Ví dụ
 
-http://localhost:3000/
 
 ```
-/** /app/page.tsx **/
+/** 
+  http://localhost:3000/
+  /app/page.tsx 
+**/
 
 import Link from 'next/link';
 
@@ -58,6 +60,11 @@ Trong đoạn mã này, bạn đã tạo một component Home và sử dụng co
 Cụ thể, khi người dùng nhấp vào liên kết “Admin”, họ sẽ được chuyển hướng đến trang /admin, và khi nhấp vào liên kết “DashBoard”, họ sẽ được chuyển hướng đến trang /admin/dashboard.
 
 ```
+/** 
+    http://localhost:3000/admin/
+    /app/admin/page.tsx 
+**/
+
 'use client'
 
 import { useRouter } from "next/navigation";
