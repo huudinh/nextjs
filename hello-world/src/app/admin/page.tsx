@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from "next/navigation";
+import { Button } from "react-bootstrap";
 
 const Admin = () => {
     const router = useRouter();
@@ -10,7 +11,7 @@ const Admin = () => {
     }
     return (
         <>
-            <button onClick={handleClick}>Back Home</button> 
+            <Button variant="danger" onClick={handleClick}>Back Home</Button> 
             <br /><br />
             Admin
         </>
