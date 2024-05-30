@@ -6,11 +6,7 @@ React Bootstrap là một thư viện React phổ biến, giúp bạn sử dụn
 
 Mỗi component trong React Bootstrap đã được xây dựng từ đầu như một component React thực sự, không cần phụ thuộc vào jQuery. Đây là một trong những thư viện React lâu đời nhất, React-Bootstrap đã phát triển và phát triển cùng với React, khiến nó trở thành một lựa chọn tuyệt vời làm nền tảng giao diện người dùng của bạn.
 
-React-Bootstrap cung cấp sẵn một bộ các React component với look-and-feel của Twitter Bootstrap component từ đó giúp việc tạo dựng UI cho React app dễ dàng hơn bao giờ hết. Ví dụ, khi ta mô tả một button nhỏ, text là “Something”, click event trigger hàm callback “someCallback”, với React-Bootstrap chúng ta chỉ cần viết như sau:
-
-```
-<Button bsStyle="success" bsSize="small" onClick={someCallback}> Something </Button>
-```
+React-Bootstrap cung cấp sẵn một bộ các React component với look-and-feel của Twitter Bootstrap component từ đó giúp việc tạo dựng UI cho React app dễ dàng hơn bao giờ hết. 
 
 ### Cài đặt React Bootstrap: 
 
