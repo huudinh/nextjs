@@ -53,31 +53,31 @@ npm install react-bootstrap bootstrap
   );
 
 ```
-  /**
-    /app/admin/page.tsx
-  **/
+/**
+  /app/admin/page.tsx
+**/
 
-  'use client'
+'use client'
 
-  import { useRouter } from "next/navigation";
-  import { Button } from "react-bootstrap";
+import { useRouter } from "next/navigation";
+import { Button } from "react-bootstrap";
 
-  const Admin = () => {
-      const router = useRouter();
+const Admin = () => {
+    const router = useRouter();
 
-      const handleClick = () => {
-          router.push("/");
-      }
-      return (
-          <>
-              <Button variant="danger" onClick={handleClick}>Back Home</Button> 
-              <br /><br />
-              Admin
-          </>
-      )
-  }
+    const handleClick = () => {
+        router.push("/");
+    }
+    return (
+        <>
+            <Button variant="danger" onClick={handleClick}>Back Home</Button> 
+            <br /><br />
+            Admin
+        </>
+    )
+}
 
-  export default Admin;
+export default Admin;
 ```
 
 *Bài tiếp theo [NX12 Tích Hợp React Bootstrap ](/session/session_12_bootstrap.md)*
