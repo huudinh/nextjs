@@ -237,4 +237,4 @@ const Header = () => {
 export default Header;
 ```
 
-*Bài tiếp theo [NX11 Sử Dụng CSS với Next.JS ](/session/session_11_css.md)*
+*Bài tiếp theo [NX11 Tích Hợp React Bootstrap ](/session/session_11_bootstrap.md)*
