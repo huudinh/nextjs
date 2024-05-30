@@ -190,4 +190,51 @@ Trong ví dụ trên, chúng ta tạo một file CSS Module tên là Button.modu
 
 Lưu ý rằng, khi sử dụng CSS Modules, bạn không cần phải lo lắng về việc tên lớp .error sẽ xung đột với các file CSS khác. Mỗi tên lớp sẽ được biên dịch thành một tên duy nhất khi build ứng dụng.
 
+### Ví dụ SASS Module
+
+Cài đặt Sass
+
+```
+npm install sass
+```
+
+Tạo file /src/styles/app.module.scss
+
+```
+.menu{
+    display: flex;
+    list-style: none;
+    padding:0;
+    li{
+        padding:5px
+    }
+}
+```
+
+Thêm sass module vào file /src/app/components/header.tsx
+
+```
+'use client'
+
+import Link from 'next/link';
+import styles from '@/styles/app.module.scss';
+
+const Header = () => {
+    return (
+        <header>
+            <ul className={styles.menu}>
+                <li>
+                    <Link href={"/admin"}>Admin</Link>
+                </li>
+                <li>
+                    <Link href={"/admin/dashboard"}>DashBoard</Link>
+                </li>
+            </ul>
+        </header>
+    )
+}
+
+export default Header;
+```
+
 *Bài tiếp theo [NX11 Sử Dụng CSS với Next.JS ](/session/session_11_css.md)*
