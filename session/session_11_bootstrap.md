@@ -8,6 +8,8 @@ Mỗi component trong React Bootstrap đã được xây dựng từ đầu như
 
 React-Bootstrap cung cấp sẵn một bộ các React component với look-and-feel của Twitter Bootstrap component từ đó giúp việc tạo dựng UI cho React app dễ dàng hơn bao giờ hết. 
 
+Bạn có thể tham khảo các React component tại đây https://react-bootstrap.netlify.app/docs/layout/grid
+
 ### Cài đặt React Bootstrap: 
 
 Sử dụng lệnh sau để cài đặt React Bootstrap và các dependencies cần thiết:
