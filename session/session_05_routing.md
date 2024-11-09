@@ -94,4 +94,4 @@ const DashBoard = () => {
 export default DashBoard;
 ```
 
-*Bài tiếp theo [NX8 Điều hướng trang Navigation ](/session/session_08_navigation.md)*
+*Bài tiếp theo [NX6 Điều hướng trang Navigation ](/session/session_06_navigation.md)*

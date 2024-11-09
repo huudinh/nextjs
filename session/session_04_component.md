@@ -46,4 +46,4 @@ Sau khi Server Components được render, một định dạng dữ liệu đ�
 
 - Việc chọn nơi đặt ranh giới mạng trong cây component của bạn là do bạn quyết định. Ví dụ, bạn có thể lấy dữ liệu và render các bài đăng của người dùng trên server (sử dụng Server Components), sau đó render nút tương tác LikeButton cho mỗi bài đăng trên client (sử dụng Client Components).
 
-*Bài tiếp theo [NX7 Giới thiệu về Routing ](/session/session_07_routing.md)*
+*Bài tiếp theo [NX4 Giới thiệu về Routing ](/session/session_04_routing.md)*

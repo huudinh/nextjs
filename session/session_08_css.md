@@ -237,4 +237,4 @@ const Header = () => {
 export default Header;
 ```
 
-*Bài tiếp theo [NX11 Tích Hợp React Bootstrap ](/session/session_11_bootstrap.md)*
+*Bài tiếp theo [NX9 Tích Hợp React Bootstrap ](/session/session_9_bootstrap.md)*
