@@ -1,4 +1,4 @@
-# NX10 Sử Dụng CSS với Next.JS
+# NX8 Sử Dụng CSS với Next.JS
 
 Next.js hỗ trợ nhiều cách để sử dụng CSS, bao gồm CSS-in-JS, CSS Modules, và Styled Components. Dưới đây là một số cách phổ biến để sử dụng CSS trong Next.js:
 

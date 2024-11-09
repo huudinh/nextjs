@@ -1,4 +1,4 @@
-# NX6 Tư duy sử dụng component
+# NX4 Tư duy sử dụng component
 
 ### Server component là gì
 

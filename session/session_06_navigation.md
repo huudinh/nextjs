@@ -1,4 +1,4 @@
-# NX8 Điều hướng trang Navigation
+# NX6 Điều hướng trang Navigation
 
 ### Điều hướng trang Navigation trong nextjs là gì
 

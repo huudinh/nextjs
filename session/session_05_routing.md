@@ -1,4 +1,4 @@
-# NX7 Giới thiệu về Routing
+# NX5 Giới thiệu về Routing
 
 ### App Routing
 

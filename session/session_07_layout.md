@@ -1,4 +1,4 @@
-# NX9 Dàn Layout
+# NX7 Dàn Layout
 
 Layout trong Next.js là một tính năng mạnh mẽ giúp bạn tái sử dụng code HTML chung cho nhiều component khác nhau, giúp cho code gọn gàng, dễ bảo trì và hiệu quả hơn
 

@@ -1,4 +1,4 @@
-# NX11 Tích Hợp React Bootstrap
+# NX9 Tích Hợp React Bootstrap
 
 ### React Bootstrap là gì
 
