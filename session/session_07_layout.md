@@ -149,4 +149,4 @@ Component Header này có thể được sử dụng như một phần của lay
 
 Cụ thể, RootLayout là một component chứa toàn bộ cấu trúc HTML cơ bản của trang, bao gồm các thẻ <html> và <body>. Trong thẻ <body>, bạn đã chèn component Header và children, đại diện cho nội dung cụ thể của từng trang.
 
-*Bài tiếp theo [NX8 Sử Dụng CSS với Next.JS ](/session/session_8_css.md)*
+*Bài tiếp theo [NX8 Sử Dụng CSS với Next.JS ](/session/session_08_css.md)*
