@@ -44,7 +44,7 @@ Next.js hoạt động bằng cách hỗ trợ cả kết xuất phía máy ch�
 <a name="5"></a>
 ### 5. Các tính năng của Next.js
 
-##### 1. Server-Side Rendering (SSR)
+#### 1. Server-Side Rendering (SSR)
 
 
 <a name="6"></a>
