@@ -4,7 +4,7 @@ Next.js là một framework phát triển web mã nguồn mở dựa trên React
 
 Trong hướng dẫn Next.js này, chúng ta sẽ học tất cả các khái niệm từ cơ bản đến nâng cao như Định tuyến (Routing), Lấy dữ liệu (Data Fetching), Biến môi trường (Environment Variables), Thẻ Meta (Meta Tags), Phục vụ tệp tĩnh (Static File Serving), Kết xuất trước (Pre-Rendering), và nhiều hơn nữa. Những kiến thức này sẽ giúp bạn xây dựng các ứng dụng web mạnh mẽ và hiệu quả với Next.js. Hãy bắt đầu hành trình học tập của bạn và khám phá những tính năng tuyệt vời mà Next.js mang lại!
 
-#### Tại sao nên học Nextjs
+### Tại sao nên học Nextjs
 
 Next.js mang lại nhiều lợi ích so với phát triển React truyền thống:
 
@@ -18,7 +18,7 @@ Ngoài ra, Next.js giảm thiểu thời gian kết xuất và tải chậm vố
 
 Những lợi ích này làm cho Next.js trở thành một lựa chọn hấp dẫn hơn so với ReactJS đối với nhiều nhà phát triển.
 
-#### Tính năng Nextjs
+### Tính năng Nextjs
 
 Next.js là một framework React mở rộng khả năng của React để xây dựng các ứng dụng web được kết xuất phía máy chủ và tạo tĩnh. Dưới đây là một số tính năng chính của Next.js:
 
