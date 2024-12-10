@@ -46,9 +46,110 @@ Next.js hoạt động bằng cách hỗ trợ cả kết xuất phía máy ch�
 
 #### 1. Server-Side Rendering (SSR)
 
+Next.js cho phép các nhà phát triển tiền kết xuất các trang trên máy chủ tại thời điểm yêu cầu, mang lại hiệu suất và SEO tốt hơn so với kết xuất phía máy khách truyền thống.
+
+####  2. Static Site Generation (SSG)
+
+Next.js cung cấp khả năng tạo trang web tĩnh cho các trang không thay đổi thường xuyên. Quá trình này bao gồm việc tạo các trang HTML tại thời điểm xây dựng, sau đó các trang này được phục vụ trực tiếp từ CDN. Điều này giúp cải thiện hiệu suất và tốc độ tải trang.
+
+#### 3. API Routes
+
+Next.js cung cấp một cách đơn giản để tạo các điểm cuối API trong ứng dụng của bạn, loại bỏ nhu cầu về một máy chủ backend riêng biệt. Điều này giúp giảm bớt sự phức tạp và tăng hiệu quả trong quá trình phát triển ứng dụng web.
+
+####  4. File-Based Routing
+
+Next.js sử dụng hệ thống định tuyến dựa trên tệp, nơi các tuyến được tạo ra bằng cách thêm các tệp và thư mục vào thư mục `pages`. Điều này giúp dễ dàng tổ chức và quản lý cấu trúc của ứng dụng của bạn.
+
+#### 5. Automatic Code Splitting
+
+Next.js tự động chia nhỏ mã của bạn thành các phần nhỏ hơn, đảm bảo rằng chỉ có JavaScript cần thiết được tải cho mỗi trang. Điều này giúp cải thiện hiệu suất và tốc độ tải trang, mang lại trải nghiệm người dùng mượt mà hơn.
+
+####  6. Hot Module Replacement (HMR)
+
+Hot Module Replacement (HMR) cho phép các nhà phát triển thấy các thay đổi trong thời gian thực mà không cần phải làm mới trình duyệt, giúp tăng tốc đáng kể quá trình phát triển. Điều này đặc biệt hữu ích khi làm việc với các ứng dụng web phức tạp, vì nó giúp tiết kiệm thời gian và cải thiện hiệu suất làm việc.
+
+#### 7. Built-In CSS and Sass Support
+
+Next.js hỗ trợ việc nhập trực tiếp các tệp CSS và Sass vào các thành phần của bạn, giúp việc tạo kiểu cho ứng dụng trở nên dễ dàng mà không cần cấu hình bổ sung. Điều này giúp bạn tiết kiệm thời gian và công sức trong quá trình phát triển, đồng thời giữ cho mã nguồn của bạn gọn gàng và dễ quản lý.
 
 <a name="6"></a>
 ### 6. Các bước để tạo ứng dụng Next.js
+
+#### Step 1: Install Node in Your System
+
+Cài đặt node js vào hệ điều hành
+
+`node -v` kiểm tra phiên bản đã cài đặt
+
+#### Step 2: Initialize the Next.js Project
+
+Bây giờ hãy tạo một thư mục cho dự án của bạn trên màn hình, điều hướng đến thư mục đó thông qua trình soạn thảo mã và chạy lệnh sau.
+
+```
+npx create-next-app@latest 
+#OR
+yarn create next-app
+#OR
+pnpm create next-app
+```
+
+#### Step 3: Configure your next.js app
+
+Viết tên dự án (mặc định là my-app) 
+
+```
+√ What is your project named? my-app
+√ Would you like to use TypeScript? No / Yes
+√ Would you like to use ESLint? No / Yes
+√ Would you like to use Tailwind CSS? No / Yes
+√ Would you like to use `src/` directory? No / Yes
+√ Would you like to use App Router? (recommended) No / Yes
+√ Would you like to customize the default import alias (@/*)? No / Yes
+√ What import alias would you like configured? @/*
+```
+
+#### Step 4: Switch to Project Directory
+
+Di chuyển đến thư mục dự án để cài đặt bất kỳ phụ thuộc nào khác.
+
+```
+cd my-app
+
+```
+
+#### Step 5: Run the Application
+
+Viết lệnh bên dưới để chạy Ứng dụng NextJS, sau đó mở URL trong trình duyệt.
+
+//index.js
+
+```
+import React from'react';
+import Link from'next/link';
+
+export default class extends React.Component {
+    render() {
+        return ( {
+        
+        // This is Jsx contains HTML
+        // code in Javascript}
+        <div>
+            <h1>Hello</h1>
+            {
+                // This is Styled-jsx contains
+                // CSS code in Javascript}
+                <style jsx>{`
+                    a{
+                        color:grey;
+                        text-decoration:none;
+                    }
+                `}</style>
+            }
+        </div>
+        )
+    }  
+}
+```
 
 <a name="7"></a>
 ### 7. Vòng đời Next.js
