@@ -40,4 +40,26 @@ Next.js là một framework React mở rộng khả năng của React để xây
 
 Những tính năng này làm cho Next.js trở thành một lựa chọn hấp dẫn cho nhiều nhà phát triển.
 
+### So sánh Nextjs và Reactjs
+
+Dưới đây là bảng so sánh giữa Next.js và React:
+
+| Tính năng                | Next.js                                      | React                                      |
+|--------------------------|----------------------------------------------|--------------------------------------------|
+| **Loại**                 | Framework                                    | Thư viện                                   |
+| **Độ khó học**           | Khó hơn (do có nhiều tính năng bổ sung)      | Dễ hơn                                     |
+| **Tính linh hoạt**       | Ít linh hoạt hơn (có quy tắc rõ ràng)        | Linh hoạt hơn                              |
+| **Độ phức tạp của mã**   | Ít mã hơn (có tính năng tích hợp sẵn)        | Nhiều mã hơn (cần thư viện bên ngoài)      |
+| **Kết xuất**             | Kết xuất phía máy chủ (SSR) tùy chọn         | Kết xuất phía máy khách (CSR) mặc định     |
+| **SEO**                  | SEO tốt hơn nhờ nội dung được kết xuất trước | Có thể đạt được với các thư viện bổ sung   |
+| **Ứng dụng**             | Thương mại điện tử, trang web marketing, blog| Ứng dụng web phức tạp, mạng xã hội, dashboard|
+
+Next.js mang lại nhiều lợi ích so với phát triển React truyền thống:
+
+- **Định tuyến tích hợp và SSR**: Không giống như React, thiếu định tuyến gốc, Next.js cung cấp chức năng định tuyến liền mạch ngay từ đầu. Ngoài ra, nó hỗ trợ kết xuất phía máy chủ, cải thiện hiệu suất và SEO.
+- **Phát triển nhanh hơn**: Next.js tăng tốc quá trình phát triển bằng cách cung cấp các tính năng và quy ước tích hợp sẵn. Các nhà phát triển có thể tập trung vào việc xây dựng các tính năng thay vì cấu hình các thiết lập phức tạp.
+- **Tối ưu hóa SEO**: Next.js cải thiện SEO bằng cách giải quyết các vấn đề về kết xuất và thời gian tải chậm liên quan đến kết xuất phía máy khách. Khả năng SSR của nó đảm bảo rằng các công cụ tìm kiếm có thể thu thập dữ liệu và lập chỉ mục nội dung của bạn một cách hiệu quả.
+
+Những lợi ích này làm cho Next.js trở thành một lựa chọn hấp dẫn hơn so với React đối với nhiều nhà phát triển.
+
 *Bài tiếp theo [NX2 Cài đặt Nextjs](/session/session_02_setup.md)*

@@ -63,4 +63,4 @@ my-nextjs-app/
 ```
 
 
-*Bài tiếp theo [NX2 Cài đặt Nextjs](/session/session_02_setup.md)*
+*Bài tiếp theo [NX2 Cài đặt Nextjs](session_02_setup.md)*
