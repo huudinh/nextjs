@@ -76,4 +76,4 @@ Tốc độ load trang nhanh hơn nhiều so với CSR (kể cả thiết bị/n
 
 => Như vậy, Nextjs là giải pháp để dung hòa giữa việc sử dụng chỉ mình "CSR" hay "SSR" như cách truyền thống
 
-*Bài tiếp theo [NX4 Server Component](/session/session_04_component.md)*
+*Bài tiếp theo [NX4 Server Component](session_04_component.md)*

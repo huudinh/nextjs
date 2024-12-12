@@ -91,4 +91,4 @@ export default Admin;
 
 Cụ thể, khi người dùng nhấp vào nút “Back Home”, họ sẽ được chuyển hướng về trang chủ nhờ vào hàm handleClick sử dụng phương thức push của router.
 
-*Bài tiếp theo [NX7 Dàn Layout ](/session/session_07_layout.md)*
+*Bài tiếp theo [NX7 Dàn Layout ](session_07_layout.md)*
