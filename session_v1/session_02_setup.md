@@ -67,4 +67,4 @@ npm run build
 
 Code HTML, CSS sẽ xuất hiện trong thư mục build
 
-*Bài tiếp theo [NX3 SPA & SSR](/session/session_03_render.md)*
+*Bài tiếp theo [NX3 SPA & SSR](session_03_render.md)*
