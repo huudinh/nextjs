@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import 'bootstrap/dist/css/bootstrap.css'; 
 import Header from "@/components/header";
 import { Container } from "react-bootstrap";
+import ListData from "@/components/ListData";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
       <Container>
         <Header />
+        <ListData />
         {children}
       </Container>
       </body>

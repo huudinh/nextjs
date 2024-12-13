@@ -79,4 +79,4 @@ npm install react-bootstrap bootstrap
   export default Admin;
 ```
 
-*Bài tiếp theo [NX12 Tích Hợp React Bootstrap ](session_10_bootstrap.md)*
+*Bài tiếp theo [NX10 Tạo Table với React Bootstrap ](session_10_table.md)*
