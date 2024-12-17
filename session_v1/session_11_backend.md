@@ -161,5 +161,5 @@ export default function Home() {
 
 Bằng cách này, bạn có thể dễ dàng tạo và sử dụng các API routes trong ứng dụng Next.js của mình để quản lý user với các chức năng thêm, sửa, xóa bằng TypeScript. Hãy thử và kiểm tra lại để đảm bảo rằng API route hoạt động như mong đợi.
 
-*Bài tiếp theo [NX12 Cài đặt Backend ](session_11_backend.md)*
+*Bài tiếp theo [NX12 SWR ](session_12_swr.md)*
 

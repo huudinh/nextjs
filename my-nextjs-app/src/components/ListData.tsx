@@ -15,7 +15,8 @@ function ListData() {
   useEffect(() => {
     fetch('/api/users')
       .then((response) => response.json())
-      .then((data) => setUsers(data));
+      .then((data) => setUsers(data))
+      // .then((data) => console.log('1'));
   }, []);
 
   const addUser = async (name: string, age: number) => {
@@ -52,7 +53,7 @@ function ListData() {
     });
     setUsers(users.filter(user => user.id !== id));
   };
-  console.log(users);
+  // console.log(users);
   
   return (
     <div>
