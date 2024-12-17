@@ -1,6 +1,7 @@
 'use client';
 import Table from 'react-bootstrap/Table';
 import { useEffect, useState } from 'react';
+import useSWR from 'swr'
 
 type User = {
   id: number;
@@ -12,12 +13,22 @@ type User = {
 function ListData() {
   const [users, setUsers] = useState<User[]>([]);
 
-  useEffect(() => {
-    fetch('/api/users')
-      .then((response) => response.json())
-      .then((data) => setUsers(data))
-      // .then((data) => console.log('1'));
-  }, []);
+  const fetcher = (url:string) => fetch(url).then((res) => res.json());
+
+  const { data, error, isLoading } = useSWR('/api/users', fetcher, {
+    revalidateIfStale: false,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false
+  })
+  console.log(data);
+  
+
+  // useEffect(() => {
+  //   fetch('/api/users')
+  //     .then((response) => response.json())
+  //     .then((data) => setUsers(data))
+  //     // .then((data) => console.log('1'));
+  // }, []);
 
   const addUser = async (name: string, age: number) => {
     const response = await fetch('/api/users', {
@@ -54,7 +65,6 @@ function ListData() {
     setUsers(users.filter(user => user.id !== id));
   };
   // console.log(users);
-  
   return (
     <div>
       <h1>User List</h1>

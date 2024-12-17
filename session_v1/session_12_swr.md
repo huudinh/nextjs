@@ -14,30 +14,6 @@ SWR là một thư viện React Hooks được phát triển bởi nhóm Next.js
 
 5. **Request Deduplication**: SWR sẽ loại bỏ các yêu cầu lặp lại, giúp giảm tải cho server 
 
-### Ví dụ sử dụng SWR trong Next.js:
-
-```javascript
-import useSWR from 'swr';
-
-const fetcher = (url) => fetch(url).then((res) => res.json());
-
-function Profile() {
-  const { data, error } = useSWR('/api/user', fetcher);
-
-  if (error) return <div>Failed to load</div>;
-  if (!data) return <div>Loading...</div>;
-
-  return (
-    <div>
-      <h1>{data.name}</h1>
-      <p>{data.email}</p>
-    </div>
-  );
-}
-
-export default Profile;
-```
-
 ### Lợi ích của SWR:
 
 - **Tăng tốc độ phản hồi**: Bằng cách sử dụng cache, SWR giúp tăng tốc độ phản hồi của ứng dụng.
@@ -47,6 +23,49 @@ export default Profile;
 - **Giảm tải cho server**: SWR loại bỏ các yêu cầu lặp lại, giúp giảm tải cho server.
 
 SWR là một công cụ mạnh mẽ và linh hoạt, giúp bạn dễ dàng quản lý việc fetch dữ liệu trong các ứng dụng React và Next.js. Bạn có thể tìm hiểu thêm về SWR và cách sử dụng nó trong tài liệu chính thức của Next.js.
+
+### Cài đặt SWR
+
+Mở terminal và chạy lệnh sau để cài đặt SWR:
+
+```
+npm install swr
+```
+
+hoặc
+
+```
+yarn add swr
+```
+
+### Ví dụ sử dụng SWR trong Next.js:
+
+```javascript
+import useSWR from 'swr'
+
+function ListData() {
+  const fetcher = (url:string) => fetch(url).then((res) => res.json());
+
+  const { data, error, isLoading } = useSWR('/api/users', fetcher, {
+    revalidateIfStale: false,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false
+  })
+  console.log(data);
+
+  return data.length;
+}
+```
+### Giải thích:
+
+1. **Cài đặt SWR**: Sử dụng lệnh `npm install swr` hoặc `yarn add swr` để cài đặt SWR vào dự án của bạn.
+
+2. **Sử dụng SWR**: Import `useSWR` từ thư viện SWR và sử dụng nó trong component React của bạn.
+
+3. **Fetcher function**: Định nghĩa một hàm `fetcher` để fetch dữ liệu từ API. Trong ví dụ này, hàm `fetcher` sử dụng `fetch` để lấy dữ liệu từ URL và trả về kết quả dưới dạng JSON.
+
+4. **useSWR hook**: Sử dụng hook `useSWR` để fetch dữ liệu từ API. Hook này trả về hai giá trị: `data` và `error`. Nếu có lỗi xảy ra, hiển thị thông báo lỗi. Nếu dữ liệu đang được tải, hiển thị thông báo "Loading...". Khi dữ liệu đã được tải, hiển thị dữ liệu trong giao diện người dùng.
+
 
 *Bài tiếp theo [NX13 SWR ](session_13_swr.md)*
 
