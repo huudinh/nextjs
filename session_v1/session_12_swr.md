@@ -1,6 +1,6 @@
 # NX12 SWR
 
-SWR là một thư viện React Hooks được phát triển bởi nhóm Next.js để hỗ trợ việc fetch dữ liệu phía client. Tên SWR xuất phát từ "stale-while-revalidate", một chiến lược vô hiệu hóa cache phổ biến trong HTTP RFC 5861.
+SWR là một thư viện React Hooks được phát triển bởi nhóm Next.js để hỗ trợ việc fetch dữ liệu phía client. Tên SWR xuất phát từ "stale-while-revalidate", một chiến lược vô hiệu hóa cache phổ biến.
 
 ### Đặc điểm của SWR:
 
@@ -67,5 +67,5 @@ function ListData() {
 4. **useSWR hook**: Sử dụng hook `useSWR` để fetch dữ liệu từ API. Hook này trả về hai giá trị: `data` và `error`. Nếu có lỗi xảy ra, hiển thị thông báo lỗi. Nếu dữ liệu đang được tải, hiển thị thông báo "Loading...". Khi dữ liệu đã được tải, hiển thị dữ liệu trong giao diện người dùng.
 
 
-*Bài tiếp theo [NX13 SWR ](session_13_swr.md)*
+*Bài tiếp theo [NX13 Display List Users](session_13_display_users.md)*
 

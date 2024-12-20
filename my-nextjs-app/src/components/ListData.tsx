@@ -10,6 +10,7 @@ type User = {
 };
 
 
+
 function ListData() {
   const [users, setUsers] = useState<User[]>([]);
 
@@ -23,12 +24,12 @@ function ListData() {
   console.log(data);
   
 
-  // useEffect(() => {
-  //   fetch('/api/users')
-  //     .then((response) => response.json())
-  //     .then((data) => setUsers(data))
-  //     // .then((data) => console.log('1'));
-  // }, []);
+  useEffect(() => {
+    fetch('/api/users')
+      .then((response) => response.json())
+      .then((data) => setUsers(data))
+      // .then((data) => console.log('1'));
+  }, []);
 
   const addUser = async (name: string, age: number) => {
     const response = await fetch('/api/users', {
