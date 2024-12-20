@@ -7,6 +7,11 @@ type User = {
   age: number;
 };
 
+interface IUsers {
+  users: IUser[];
+}
+
+
 let users: User[] = [
   { id: 1, name: 'John Doe', age: 28 },
   { id: 2, name: 'Jane Smith', age: 34 },
