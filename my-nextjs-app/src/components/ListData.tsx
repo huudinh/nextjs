@@ -1,35 +1,14 @@
 'use client';
 import Table from 'react-bootstrap/Table';
-import { useEffect, useState } from 'react';
-import useSWR from 'swr'
+import { Button } from 'react-bootstrap';
+import { useState } from 'react';
 
-type User = {
-  id: number;
-  name: string;
-  age: number;
-};
+interface IProps { 
+  users: User[]; 
+}
 
-
-
-function ListData() {
-  const [users, setUsers] = useState<User[]>([]);
-
-  const fetcher = (url:string) => fetch(url).then((res) => res.json());
-
-  const { data, error, isLoading } = useSWR('/api/users', fetcher, {
-    revalidateIfStale: false,
-    revalidateOnFocus: false,
-    revalidateOnReconnect: false
-  })
-  console.log(data);
-  
-
-  useEffect(() => {
-    fetch('/api/users')
-      .then((response) => response.json())
-      .then((data) => setUsers(data))
-      // .then((data) => console.log('1'));
-  }, []);
+const ListData = (props:IProps) => {
+  const [users, setUsers] = useState(props.users);
 
   const addUser = async (name: string, age: number) => {
     const response = await fetch('/api/users', {
@@ -76,8 +55,7 @@ function ListData() {
             <th>ID</th>
             <th>Name</th>
             <th>Age</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -86,13 +64,16 @@ function ListData() {
               <td>{user.id}</td>
               <td>{user.name}</td>
               <td>{user.age}</td>
-              <td><button onClick={() => updateUser(user.id, 'Dinh', 40)}>Edit</button></td>
-              <td><button onClick={() => deleteUser(user.id)}>Delete</button></td>
+              <td>
+                <Button variant="primary">View</Button>
+                <Button variant="warning" className="mx-3" onClick={() => updateUser(user.id, 'Dinh', 40)}>Edit</Button>
+                <Button variant="danger" onClick={() => deleteUser(user.id)}>Delete</Button>
+              </td>
             </tr>
           ))}
         </tbody>
       </Table>
-      <button onClick={() => addUser('New User', 30)}>Add User</button>
+      <Button variant='primary' onClick={() => addUser('New User', 30)}>Add User</Button>
     </div>
   );
 }
