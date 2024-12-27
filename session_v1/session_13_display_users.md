@@ -206,5 +206,5 @@ const ListData = (props:IProps) => {
 export default ListData;
 ```
 
-*Bài tiếp theo [NX13 Display List Blog ](session_13_display_blog.md)*
+*Bài tiếp theo [NX14 Design Modal Add User](session_14_add_user.md)*
 
