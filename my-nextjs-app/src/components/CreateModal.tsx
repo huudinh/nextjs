@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
-
+import { toast } from 'react-toastify';
 interface IProps {
   showModalCreate: boolean;
   setShowModalCreate: (showModalCreate: boolean) => void;
@@ -16,7 +16,12 @@ function CreateModal(props: IProps) {
   const [name, setName] = useState<string>('');
   const [age, setAge] = useState<number>(0);
 
-  const handleSubmit = () => {
+  const handleSubmit = () => {    
+    if(!name){
+      toast.error('Note empty name');
+      return;
+    }
+
     console.log('>> check data', name, age);
     addNewUser(name, age);
     handleCloseModal();

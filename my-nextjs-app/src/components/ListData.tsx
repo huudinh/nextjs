@@ -3,7 +3,7 @@ import Table from 'react-bootstrap/Table';
 import { Button } from 'react-bootstrap';
 import { useState } from 'react';
 import CreateModal from './CreateModal';
-
+import { ToastContainer, toast } from 'react-toastify';
 interface IProps { 
   users: User[]; 
 }
@@ -21,9 +21,13 @@ const ListData = (props:IProps) => {
       },
       body: JSON.stringify({ name, age }),
     });
-    const newUser = await response.json();
-    setUsers([...users, newUser]);
 
+    const newUser = await response.json();
+
+    if (newUser){
+      setUsers([...users, newUser]);
+      toast.success('Create success');
+    }
   };
 
   const updateUser = async (id: number, name: string, age: number) => {
@@ -89,6 +93,18 @@ const ListData = (props:IProps) => {
         setShowModalCreate={setShowModalCreate} 
         addNewUser={addUser}
       />
+       <ToastContainer 
+          position="bottom-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+       />
     </div>
   );
 }
