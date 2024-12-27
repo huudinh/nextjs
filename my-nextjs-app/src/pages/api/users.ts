@@ -27,7 +27,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       break;
     case 'POST':
       // Thêm một user mới
-      const newUser = { id: users.length + 1, name, age };
+      const maxId = users.reduce((max:number, user:User) => (user.id > max ? user.id : max), 0);
+      const newUser = { id: maxId + 1, name, age };
       users.push(newUser);
       writeData(users);
       res.status(201).json(newUser);
