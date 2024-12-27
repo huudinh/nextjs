@@ -91,5 +91,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 Bằng cách này, bạn có thể lưu trữ dữ liệu vào file `data.json` trong Next.js và quản lý dữ liệu người dùng một cách dễ dàng. Hãy thử và kiểm tra lại để đảm bảo rằng mọi thứ hoạt động như mong đợi.
 
 
-*Bài tiếp theo [NX15 Design Modal Add New](session_15_add_new.md)*
+*Bài tiếp theo [NX16 React Toastify](session_16_react_toastify.md)*
 

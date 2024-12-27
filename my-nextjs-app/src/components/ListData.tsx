@@ -53,7 +53,12 @@ const ListData = (props:IProps) => {
   return (
     <div>
       <h1>User List</h1>
-
+      <Button 
+        variant='primary' 
+        onClick={() => {
+          setShowModalCreate(true);
+        }
+      }>Add User</Button><br/><br/>
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -78,12 +83,7 @@ const ListData = (props:IProps) => {
           ))}
         </tbody>
       </Table>
-      <Button 
-        variant='primary' 
-        onClick={() => {
-          setShowModalCreate(true);
-        }
-      }>Add User</Button>
+      
       <CreateModal 
         showModalCreate={showModalCreate} 
         setShowModalCreate={setShowModalCreate} 
