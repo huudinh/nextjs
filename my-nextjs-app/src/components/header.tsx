@@ -13,6 +13,9 @@ const Header = () => {
                 <li>
                     <Link href={"/admin/dashboard"}>DashBoard</Link>
                 </li>
+                <li>
+                    <Link href={"/admin/users"}>Users</Link>
+                </li>
             </ul>
         </header>
     )

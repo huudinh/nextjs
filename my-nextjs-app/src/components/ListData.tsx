@@ -1,5 +1,6 @@
 'use client';
 import Table from 'react-bootstrap/Table';
+import Link from 'next/link'
 import { Button } from 'react-bootstrap';
 import { useState } from 'react';
 import CreateModal from './CreateModal';
@@ -64,8 +65,7 @@ const ListData = (props:IProps) => {
   const sortedUsers = users.sort((a, b) => b.id - a.id);
 
   return (
-    <div>
-      <h1>User List</h1>
+    <div>      
       <Button 
         variant='primary' 
         onClick={() => {
@@ -88,7 +88,7 @@ const ListData = (props:IProps) => {
               <td>{user.name}</td>
               <td>{user.age}</td>
               <td>
-                <Button variant="primary">View</Button>
+                <Link className='btn btn-primary' href={`/admin/users/${user.id}`}>View</Link>
                 <Button variant="warning" className="mx-3" 
                   onClick={
                     () => {
@@ -97,7 +97,6 @@ const ListData = (props:IProps) => {
                     }
                   }
                   >Edit</Button>
-                {/* <Button variant="warning" className="mx-3" onClick={() => updateUser(user.id, 'Dinh', 40)}>Edit</Button> */}
                 <Button variant="danger" onClick={() => deleteUser(user.id)}>Delete</Button>
               </td>
             </tr>

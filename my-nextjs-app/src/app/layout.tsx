@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 // import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.css'; 
-import Header from "@/components/header";
+import Header from "../components/Header";
 import { Container } from "react-bootstrap";
 // import ListData from "@/components/ListData";
 
