@@ -44,6 +44,7 @@ https://www.npmjs.com/package/react-toastify
 React Toastify giúp bạn dễ dàng thêm các thông báo đẹp mắt và hiệu quả vào ứng dụng React của mình.
 
 4. **Áp dụng Toast**
+    - Cài đặt thư viện vào dự án my-nextjs-app
     - Mỗi khi thêm mới User thành công khiển thị thông báo
     - Nhắc lỗi khi thiếu thông tin tên User
 
@@ -251,5 +252,4 @@ const ListData = (props:IProps) => {
 export default ListData;
 ```
 
-*Bài tiếp theo [NX17 Design Modal Add New](session_17_add_new.md)*
-
+*Bài tiếp theo [NX17 Update User](session_17_update_user.md)*
