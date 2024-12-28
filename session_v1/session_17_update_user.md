@@ -241,5 +241,4 @@ const ListData = (props:IProps) => {
 export default ListData;
 ```
 
-*Bài tiếp theo [NX18 Backend Update](session_18_backend_update.md)*
-
+*Bài tiếp theo [NX18 Dynamic Routes](session_18_dynamic_routes.md)*
