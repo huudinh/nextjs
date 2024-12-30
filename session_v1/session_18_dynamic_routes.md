@@ -281,4 +281,4 @@ export default ListData;
 ```
 
 
-*Bài tiếp theo [NX18 Dynamic Routes](session_18_dynamic_routes.md)*
+*Bài tiếp theo [NX19 View Detail](session_19_view_detail.md)*
