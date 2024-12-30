@@ -89,7 +89,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 ### Sửa file app/admin/users/[id]/page.tsx
 
-```typescirpt
+```javascript
 'use client'
 import useSWR, { Fetcher } from 'swr'
 import Link from 'next/link'
@@ -104,11 +104,14 @@ const ViewDetailUser = ({ params } : { params: { id: string } }) => {
     })
 
     if (isLoading) return <div>Loading...</div>
+    if (error) return <div>Failed to load user data</div>
+    if (!data) return <div>No user data found</div>
+
     return (
         <div> 
             <p>Chi tiết <b>User</b> có id: {params.id}</p>
-            <p>Họ tên: <b>{data?.name}</b></p>
-            <p>Tuổi: <b>{data?.age}</b></p>
+            <p>Họ tên: <b>{data.name}</b></p>
+            <p>Tuổi: <b>{data.age}</b></p>
             <p><Link href="/admin/users/">Quay lại</Link></p>
         </div>
     )
@@ -117,5 +120,42 @@ const ViewDetailUser = ({ params } : { params: { id: string } }) => {
 export default ViewDetailUser;
 ```
 
+### Giải thích:
+1. **Xử lý lỗi**: Thêm kiểm tra `if (error)` để hiển thị thông báo lỗi nếu có lỗi xảy ra trong quá trình lấy dữ liệu.
+2. **Kiểm tra dữ liệu**: Thêm kiểm tra `if (!data)` để hiển thị thông báo nếu không tìm thấy dữ liệu người dùng.
+
+Cú pháp `{ params } : { params: { id: string } }` trong TypeScript là một cách để sử dụng destructuring và type annotation cùng nhau. Hãy cùng phân tích từng phần:
+
+### Destructuring
+Destructuring là một cú pháp cho phép bạn trích xuất các giá trị từ mảng hoặc đối tượng và gán chúng vào các biến riêng lẻ. Trong trường hợp này, `{ params }` là destructuring của đối tượng `props` để lấy thuộc tính `params`.
+
+### Type Annotation
+Type annotation là cách để chỉ định kiểu dữ liệu cho biến hoặc tham số trong TypeScript. Trong trường hợp này, `: { params: { id: string } }` là type annotation để chỉ định kiểu dữ liệu của `params`.
+
+### Kết hợp Destructuring và Type Annotation
+Khi kết hợp cả hai, bạn có thể trích xuất giá trị từ đối tượng và đồng thời chỉ định kiểu dữ liệu cho giá trị đó. Cụ thể trong trường hợp này:
+
+- `{ params }` là destructuring để lấy thuộc tính `params` từ đối tượng `props`.
+- `: { params: { id: string } }` là type annotation để chỉ định rằng `params` là một đối tượng có thuộc tính `id` là một chuỗi (string).
+
+### Ví dụ
+Dưới đây là một ví dụ đầy đủ để minh họa:
+
+```typescript
+type Props = {
+  params: {
+    id: string;
+  };
+};
+
+const ViewDetailUser = ({ params }: Props) => {
+  const { id } = params;
+  return <div>User ID: {id}</div>;
+};
+```
+
+Trong ví dụ này:
+- `type Props` định nghĩa kiểu dữ liệu cho `props`, trong đó `params` là một đối tượng có thuộc tính `id` là một chuỗi.
+- `{ params }: Props` sử dụng destructuring để lấy `params` từ `props` và đồng thời chỉ định kiểu dữ liệu cho `params`.
 
 *Bài tiếp theo [NX20 View Detail](session_20_view_detail.md)*
