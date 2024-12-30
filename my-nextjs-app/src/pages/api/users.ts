@@ -22,8 +22,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   switch (method) {
     case 'GET':
-      // Trả về danh sách user
-      res.status(200).json(users);
+      if (req.query.id) {
+        // Trả về user cụ thể dựa trên ID
+        const userId = parseInt(req.query.id as string, 10);
+        const user = users.find((user: User) => user.id === userId);
+        if (user) {
+          res.status(200).json(user);
+        } else {
+          res.status(404).json({ message: 'User not found' });
+        }
+      } else {
+        // Trả về danh sách user
+        res.status(200).json(users);
+      }      
       break;
     case 'POST':
       // Thêm một user mới
