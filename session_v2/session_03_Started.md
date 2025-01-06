@@ -253,7 +253,7 @@ Có bốn cách để lấy dữ liệu:
 - Revalidation dựa trên thời gian.
 - Revalidation theo yêu cầu.
 
-**Fetching Data **:
+**Fetching Data **
 
 ```jsx
 // pages/posts.js
@@ -299,15 +299,6 @@ export default function Home() {
   );
 }
 ```
-
-**Các tính năng mà Next.js cung cấp**:
-- **Server-side Rendering (SSR) và Static Site Generation (SSG)**: Next.js cho phép bạn chọn cách các trang của bạn được tạo. SSR cho phép nội dung động được cá nhân hóa cho từng người dùng, trong khi SSG cung cấp các trang tĩnh được pre-render để tải nhanh.
-- **Automatic Code-Splitting**: Next.js thông minh chia nhỏ ứng dụng của bạn thành các gói nhỏ hơn, đảm bảo chỉ tải mã cần thiết cho mỗi trang, mang lại trải nghiệm người dùng nhanh hơn.
-- **File-Based Routing**: Routing trong Next.js rất trực quan. Mỗi tệp trong thư mục `pages` tương ứng với một route trong ứng dụng của bạn, làm cho cấu trúc rõ ràng và dễ quản lý.
-- **Built-in Data Fetching**: Next.js cung cấp các hàm như `getStaticProps` và `getServerSideProps` để lấy dữ liệu tại thời điểm build hoặc trên mỗi yêu cầu, mang lại sự linh hoạt cho các loại nội dung khác nhau.
-- **Automatic Image Optimization**: Next.js tự động tối ưu hóa hình ảnh cho các kích thước màn hình và thiết bị khác nhau, cải thiện hiệu suất trang web và trải nghiệm người dùng.
-- **TypeScript Support**: Next.js tích hợp liền mạch với TypeScript, cung cấp an toàn kiểu dữ liệu và cải thiện trải nghiệm phát triển cho người dùng TypeScript.
-- **Static Site Generation (SSG)**: Next.js hỗ trợ tạo trang tĩnh, nơi các trang có thể được pre-build tại thời điểm build, nâng cao hiệu suất và giảm tải cho server.
 
 <a name="11"></a>
 ### 11. NextJS không có những tính năng nào?
