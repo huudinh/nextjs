@@ -158,4 +158,4 @@ Trong ví dụ này:
 - `type Props` định nghĩa kiểu dữ liệu cho `props`, trong đó `params` là một đối tượng có thuộc tính `id` là một chuỗi.
 - `{ params }: Props` sử dụng destructuring để lấy `params` từ `props` và đồng thời chỉ định kiểu dữ liệu cho `params`.
 
-*Bài tiếp theo [NX20 View Detail](session_20_view_detail.md)*
+*Bài tiếp theo [NX20 Delete User](session_20_delete_user.md)*
