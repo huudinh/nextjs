@@ -250,4 +250,4 @@ const ListData = (props:IProps) => {
 export default ListData;
 ```
 
-*Bài tiếp theo [NX20 Delete User](session_20_delete_user.md)*
+*Bài tiếp theo [NX21 Meta data](session_21_meta_data.md)*
