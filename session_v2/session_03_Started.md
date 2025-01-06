@@ -253,7 +253,7 @@ Có bốn cách để lấy dữ liệu:
 - Revalidation dựa trên thời gian.
 - Revalidation theo yêu cầu.
 
-**Fetching Data **
+**Fetching Data**
 
 ```jsx
 // pages/posts.js
