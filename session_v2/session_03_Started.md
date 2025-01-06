@@ -6,7 +6,7 @@ NextJS là một framework React mã nguồn mở để xây dựng các ứng d
 
 1. [Tạo ứng dụng Next.js đầu tiên của bạn](#1)
 2. [NextJS Scripts](#2)
-3. [Thêm TypeScript vào NextJS](#3)
+3. [Hiển thị lời chào Hello](#3)
 4. [Pages and Routes trong Next JS](#4)
 5. [Links and Navigation trong Next JS](#5)
 6. [Route Groups trong Next JS](#6)
@@ -22,15 +22,11 @@ NextJS là một framework React mã nguồn mở để xây dựng các ứng d
 <a name="1"></a>
 ### 1. Tạo ứng dụng Next.js đầu tiên của bạn
 
-Dưới đây là bản dịch và tối ưu nội dung bạn yêu cầu:
-
-**Tạo ứng dụng NextJS**
-
 Để tạo một ứng dụng NextJS, bạn có thể làm theo các bước sau:
 
 **Bước 1**: Cài đặt NodeJS nếu bạn chưa có. Mở terminal và chạy lệnh sau để tạo một ứng dụng Next.js mới:
 ```bash
-npx create-next-app my-next-app
+npx create-next-app my-app
 ```
 
 **Bước 2**: Trong quá trình cài đặt, bạn sẽ thấy các câu hỏi sau:
@@ -45,7 +41,7 @@ npx create-next-app my-next-app
 
 **Bước 3**: Di chuyển vào thư mục ứng dụng mới tạo:
 ```bash
-cd my-next-app
+cd my-app
 ```
 
 **Bước 4**: Khởi động server phát triển:
@@ -55,7 +51,8 @@ npm run dev
 
 **Bước 5**: Mở trình duyệt và truy cập `http://localhost:3000` để xem ứng dụng Next.js của bạn đang chạy.
 
-**NextJS Scripts**
+<a name="2"></a>
+### 2. NextJS Scripts
 
 Next.js cung cấp một số script để quản lý ứng dụng của bạn:
 ```json
@@ -73,20 +70,114 @@ Next.js cung cấp một số script để quản lý ứng dụng của bạn:
 - `lint`: Chạy kiểm tra linting trên các tệp dự án Next.js của bạn bằng ESLint.
 - `export`: Xuất ứng dụng dưới dạng trang tĩnh.
 
-Hy vọng bản dịch và tối ưu này sẽ giúp bạn dễ dàng tạo và quản lý ứng dụng NextJS của mình! Nếu bạn có bất kỳ câu hỏi nào khác, đừng ngần ngại hỏi nhé.
-
-<a name="2"></a>
-### 2. NextJS Scripts
 
 
 <a name="3"></a>
-### 3. Thêm TypeScript vào NextJS
+### 3. Hiển thị lời chào Hello
+
+Sửa file src/app/page.tsx
+
+```
+export default function Home() {
+  return (
+    <div>
+      <h1>Hello</h1>
+      {
+          <style>{`
+              a{
+                  color:grey;
+                  text-decoration:none;
+              }
+          `}</style>
+      }
+  </div>
+  );
+}
+```
 
 <a name="4"></a>
 ### 4. Pages and Routes trong Next JS
 
+1. **Routing**: Next.js sử dụng cấu trúc router dựa trên tệp, trong đó các thư mục xác định các tuyến đường. Một tệp `page.tsx` đặc biệt được sử dụng để tạo các đoạn đường dẫn.
+
+2. **Pages**: Một trang là một giao diện người dùng (UI) duy nhất cho một tuyến đường. Sử dụng các thư mục lồng nhau để xác định các tuyến đường và tệp `page.tsx` để làm cho nó có thể truy cập công khai.
+   - `src/app/pages.tsx` tương ứng với trang chủ (/).
+   - `src/app/about/pages.tsx` tương ứng với trang giới thiệu (/about).
+
+3. **Layouts**: Một layout là một giao diện người dùng được chia sẻ giữa nhiều trang. Khi điều hướng, layouts giữ nguyên trạng thái, vẫn tương tác và không render lại.
+
 <a name="5"></a>
 ### 5. Links and Navigation trong Next JS
+
+Next.js cung cấp hai phương pháp chính để liên kết và điều hướng giữa các tuyến đường:
+
+1. **Sử dụng thành phần `<Link>`**: Thành phần `<Link>` là một thành phần tích hợp mở rộng thẻ HTML `<a>` để cung cấp tính năng prefetching và điều hướng phía client giữa các tuyến đường.
+
+   ```jsx
+   // src/app/page.tsx
+
+    'use client';
+    import Link from "next/link"
+
+    const Home = () => {
+    return (
+        <div className="container">
+        <Link href="/about">About</Link>
+        <h1>Hello</h1>
+        {
+            <style>{`
+                a{
+                    color:red;
+                    text-decoration:none;
+                }
+                .container{
+                max-width:800px;
+                margin:10px auto;
+                }
+            `}</style>
+        }
+        </div>
+    );
+    }
+   ```
+
+2. **Sử dụng hook `useRouter`**: Hook `useRouter` cho phép bạn thay đổi tuyến đường một cách lập trình. Hook này chỉ có thể được sử dụng trong các thành phần phía client.
+   ```jsx
+    // src/app/about/page.tsx
+    'use client';
+    import { useRouter } from 'next/navigation'
+
+    const About = () => {
+        const router = useRouter();
+
+        const goToHome = () => {
+            router.push('/');
+        };
+
+        return (
+            <div className='container'>
+                <h1>About</h1>
+                <button onClick={goToHome}>Go to Home Page</button>
+                {
+                <style>{`
+                    .container{
+                        max-width:800px;
+                        margin:10px auto;
+                    }
+                        button{
+                        padding:5px 10px;
+                        }
+                `}</style>
+                }
+            </div>
+        );
+    };
+
+    export default About;
+   ```
+
+**Điều hướng và routing** trong Next.js sử dụng các kỹ thuật như Prefetching, Caching, Partial rendering, Soft navigation, và Back and forward navigation để cải thiện hiệu suất và trải nghiệm người dùng.
+
 
 <a name="6"></a>
 ### 6. Route Groups trong Next JS
