@@ -276,4 +276,4 @@ Trả về một đối tượng chứa props, trong đó data là dữ liệu �
 
 Next.js rất dễ tiếp cận với người mới. Framework này được xây dựng trên nền tảng React, vì vậy nếu bạn đã có kiến thức cơ bản về React, HTML, CSS và JavaScript, bạn có thể nhanh chóng làm quen với Next.js. Next.js cung cấp nhiều tính năng tích hợp sẵn và các quy ước giúp đơn giản hóa quá trình phát triển, làm cho việc tạo ra các ứng dụng web mạnh mẽ và hiệu quả trở nên dễ dàng hơn. Ngoài ra, tài liệu phong phú và cộng đồng hỗ trợ tích cực cũng là một điểm mạnh giúp Next.js trở thành lựa chọn tuyệt vời cho các nhà phát triển ở mọi cấp độ.
 
-*Bài tiếp theo [NX2 Cài đặt Nextjs](/session/session_02_setup.md)*
+*Bài tiếp theo [NX3 Getting Started](/session/session_03_Started.md)*
