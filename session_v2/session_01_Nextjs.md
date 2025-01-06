@@ -62,4 +62,4 @@ Next.js mang lại nhiều lợi ích so với phát triển React truyền th�
 
 Những lợi ích này làm cho Next.js trở thành một lựa chọn hấp dẫn hơn so với React đối với nhiều nhà phát triển.
 
-*Bài tiếp theo [NX2 Cài đặt Nextjs](/session/session_02_setup.md)*
+*Bài tiếp theo [NX2 Cài đặt Nextjs](session_02_Introduction.md)*
