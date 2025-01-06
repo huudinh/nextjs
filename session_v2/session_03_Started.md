@@ -116,4 +116,4 @@ Hy vọng bản dịch và tối ưu này sẽ giúp bạn dễ dàng tạo và 
 ### 14. Câu hỏi thường gặp - Bắt đầu với Next.js
 
 
-*Bài tiếp theo [NX2 Cài đặt Nextjs](/session/session_02_setup.md)*
+*Bài tiếp theo [NX3 Getting Started](session_03_Started.md)*
