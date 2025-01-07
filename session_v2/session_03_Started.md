@@ -312,12 +312,6 @@ export default function Home() {
 
 ```
 
-**Caching Data**: Caching lưu trữ dữ liệu để không cần phải lấy lại từ nguồn dữ liệu cho mỗi yêu cầu.
-
-**Revalidating Data**: Revalidating dữ liệu là quá trình xóa dữ liệu cache và lấy dữ liệu mới nhất. Dữ liệu cache có thể được revalidate theo hai cách:
-- Revalidation dựa trên thời gian.
-- Revalidation theo yêu cầu.
-
 <a name="11"></a>
 ### 11. NextJS không có những tính năng nào?
 
