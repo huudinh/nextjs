@@ -16,8 +16,7 @@ NextJS là một framework React mã nguồn mở để xây dựng các ứng d
 10. [Requesting Data trong Next JS](#10)
 11. [NextJS không có những tính năng nào?](#11)
 12. [NextJS App router là gì?](#12)
-13. [Kết luận](#13)
-14. [Câu hỏi thường gặp - Bắt đầu với Next.js](#14)
+13. [Câu hỏi thường gặp](#13)
 
 <a name="1"></a>
 ### 1. Tạo ứng dụng Next.js đầu tiên của bạn
@@ -315,14 +314,34 @@ export default function Home() {
 <a name="11"></a>
 ### 11. NextJS không có những tính năng nào?
 
+1. **Quản lý trạng thái tích hợp**: Next.js không đi kèm với các giải pháp quản lý trạng thái tích hợp. Các nhà phát triển thường sử dụng các thư viện như Redux, MobX hoặc React Context để quản lý trạng thái ứng dụng.
+
+2. **Giải pháp tạo kiểu tích hợp**: Next.js không bao gồm giải pháp tích hợp để tạo kiểu cho các thành phần. Bạn có thể chọn từ nhiều giải pháp tạo kiểu khác nhau như CSS Modules, Styled Components, Tailwind CSS hoặc Emotion.
+
+3. **Tích hợp GraphQL**: Mặc dù bạn có thể sử dụng GraphQL với Next.js, nhưng nó không được tích hợp sẵn. Bạn sẽ cần cài đặt và cấu hình các thư viện như Apollo Client hoặc Relay để làm việc với GraphQL.
+
+4. **Quản lý dữ liệu**: Next.js không cung cấp giải pháp quản lý dữ liệu tích hợp. Bạn sẽ cần sử dụng các thư viện bên ngoài như SWR hoặc React Query để quản lý dữ liệu và các yêu cầu API.
+
+5. **Tích hợp với CMS**: Next.js không có tích hợp sẵn với các hệ thống quản lý nội dung (CMS). Bạn sẽ cần cấu hình và tích hợp các CMS như Strapi, Contentful hoặc Sanity theo cách thủ công.
+
 <a name="12"></a>
 ### 12. NextJS App router là gì?
 
+Chính xác! Next.js App Router là một phần quan trọng của Next.js, giúp bạn quản lý và xác định các tuyến đường trong ứng dụng của mình. Hệ thống định tuyến dựa trên tệp của Next.js giúp việc cấu trúc điều hướng trở nên trực quan và hiệu quả. Dưới đây là một số tính năng nổi bật của Next.js App Router:
+
+1. **Định tuyến dựa trên tệp**: Bạn chỉ cần tạo các tệp trong thư mục `pages` và Next.js sẽ tự động tạo các tuyến đường tương ứng.
+2. **Dynamic Routing**: Hỗ trợ định tuyến động bằng cách sử dụng các dấu ngoặc vuông trong tên tệp, ví dụ: `[id].js`.
+3. **API Routes**: Bạn có thể tạo các API endpoint bằng cách thêm các tệp JavaScript vào thư mục `pages/api`.
+4. **Nested Routing**: Hỗ trợ định tuyến lồng nhau, giúp bạn tổ chức các tuyến đường phức tạp một cách dễ dàng.
+5. **Middleware**: Cho phép bạn thêm các logic tùy chỉnh vào quá trình xử lý yêu cầu trước khi nó đến các tuyến đường.
+
 <a name="13"></a>
-### 13. Kết luận
+### 13. Câu hỏi thường gặp
 
-<a name="14"></a>
-### 14. Câu hỏi thường gặp - Bắt đầu với Next.js
-
+1. **Làm thế nào để tạo một dự án Next.js mới?** Sử dụng npx create-next-app theo sau là tên dự án của bạn để khởi tạo dự án Next.js mới.
+2. **Làm thế nào để chạy ứng dụng** Chạy npm run dev 
+3. **API Routes trong Next.js là gì?** API Routes trong Next.js là các hàm không có máy chủ xử lý logic phía sau, nằm trong thư mục pages/api.
+4. **Có những phương pháp CSS nào trong Next.js?** Bạn có thể sử dụng CSS Modules, Tailwind CSS hoặc các giải pháp CSS-in-JS khác như styled-components.
+5. **Làm thế nào để tối ưu hóa SEO trong Next.js?** Sử dụng thành phần <Head> để thiết lập siêu dữ liệu và đảm bảo cấu trúc HTML và tổ chức nội dung phù hợp để có hiệu suất SEO tốt hơn.
 
 *Bài tiếp theo [NX3 Getting Started](session_03_Started.md)*
