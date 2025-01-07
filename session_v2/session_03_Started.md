@@ -204,8 +204,6 @@ Dưới đây là bản dịch và tóm tắt nội dung về Route Groups trong
 <a name="7"></a>
 ### 7. SEO trong Next JS
 
-**SEO in Next.js**
-
 Next.js cung cấp các tối ưu hóa SEO tích hợp như render phía server (server-side rendering) và chia nhỏ mã tự động (automatic code splitting), giúp cải thiện khả năng hiển thị trên công cụ tìm kiếm. Các nhà phát triển cũng có thể sử dụng thẻ meta và dữ liệu có cấu trúc để tăng cường SEO hơn nữa.
 
 <a name="8"></a>
@@ -241,22 +239,9 @@ Có bốn cách để lấy dữ liệu:
 
 1. **Client-side**: Next.js tích hợp tốt với các thư viện như `fetch` hoặc `axios` để thực hiện các yêu cầu API trực tiếp từ trình duyệt. Cách tiếp cận này lý tưởng cho việc lấy dữ liệu không cần xử lý phía server.
 
-2. **Server-side**: Các hàm như `getStaticProps` và `getServerSideProps` cho phép bạn lấy dữ liệu trên server trước khi trang được render. Điều này hữu ích cho nội dung động cần được cá nhân hóa cho từng người dùng.
-
-**getStaticProps vs. getServerSideProps**:
-- **getStaticProps**: Hàm này lấy dữ liệu tại thời điểm build, làm cho các trang của bạn được tạo tĩnh. Điều này lý tưởng cho nội dung ít thay đổi và ưu tiên thời gian tải nhanh.
-- **getServerSideProps**: Hàm này lấy dữ liệu trên mỗi yêu cầu, làm cho các trang của bạn được render phía server. Điều này cung cấp trải nghiệm động nhất nhưng có thể có một chút chi phí hiệu suất so với `getStaticProps`.
-
-**Caching Data**: Caching lưu trữ dữ liệu để không cần phải lấy lại từ nguồn dữ liệu cho mỗi yêu cầu.
-
-**Revalidating Data**: Revalidating dữ liệu là quá trình xóa dữ liệu cache và lấy dữ liệu mới nhất. Dữ liệu cache có thể được revalidate theo hai cách:
-- Revalidation dựa trên thời gian.
-- Revalidation theo yêu cầu.
-
-**Fetching Data**
 
 ```jsx
-// pages/posts.js
+// pages/posts/page.tsx
 
 'use client';
 import { useState, useEffect } from 'react';
@@ -299,6 +284,39 @@ export default function Home() {
   );
 }
 ```
+
+2. **Server-side**: Các hàm như `getStaticProps` và `getServerSideProps` cho phép bạn lấy dữ liệu trên server trước khi trang được render. Điều này hữu ích cho nội dung động cần được cá nhân hóa cho từng người dùng.
+
+```jsx
+// pages/posts/server/page.tsx
+import { use } from 'react';
+
+async function fetchData() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts/2/');
+  const data = await response.json();
+  return data;
+}
+
+export default function Home() {
+  const data = use(fetchData());
+
+  return (
+    <div>
+      <h1>Data</h1>
+      <p>ID: {data.id}</p>
+      <p>Name: {data.body}</p>
+      {/* ... display other data */}
+    </div>
+  );
+}
+
+```
+
+**Caching Data**: Caching lưu trữ dữ liệu để không cần phải lấy lại từ nguồn dữ liệu cho mỗi yêu cầu.
+
+**Revalidating Data**: Revalidating dữ liệu là quá trình xóa dữ liệu cache và lấy dữ liệu mới nhất. Dữ liệu cache có thể được revalidate theo hai cách:
+- Revalidation dựa trên thời gian.
+- Revalidation theo yêu cầu.
 
 <a name="11"></a>
 ### 11. NextJS không có những tính năng nào?
